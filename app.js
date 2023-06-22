@@ -70,6 +70,9 @@ app.post('/login',async (req, res)=>{
 app.get('/register',(req, res)=>{
     res.render('register');
 });
+
+//user registration
+
 app.post('/register', async (req, res)=>{
     const {userName, phone, email, password} = req.body;
     let user = await userModel.findOne({email});
