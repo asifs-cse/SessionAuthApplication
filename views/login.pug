@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html
+  head
+    title Batch 5
+  body
+    include ./layout/header.pug
+    div(class='wrapper-login')
+      div(class='form-box register')
+        h2 Login
+        form(action='/login' method='post')
+          div(class="input-box")
+            span(class='icon') <ion-icon name="mail-outline"></ion-icon>
+            input(type='email' id='email' name='email')
+            label(for='email') Email: 
+          div(class="input-box")
+            span(class='icon') <ion-icon name="lock-closed-outline"></ion-icon>
+            input(type='password' id='password' name='password')
+            label(for='password') Password: 
+          div(class="login-btn") 
+            input(type='submit' id='submit', value='Login' class='btn')
+          div(class='login-register')
+            p Don't have Account?
+            a(href='/register' class='register-link') Register
+    script(src='script.js')
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  div(class='footer')
+    include ./layout/footer.pug

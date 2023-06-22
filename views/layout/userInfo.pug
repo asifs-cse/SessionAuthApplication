@@ -1,0 +1,19 @@
+div(class='filter')
+    table
+        thead 
+            tr 
+                th Photo 
+                th Name 
+                th Phone
+                th Email
+                th 
+                th
+        tbody
+        for item in results 
+            tr
+                td Not Found!
+                td= item.userName 
+                td= item.phone 
+                td= item.email
+                td(class='edit') Edit
+                td(class='delete') Delete

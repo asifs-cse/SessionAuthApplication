@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+html
+  head
+    title Batch 5
+  body
+  div(class='profile')
+    include ./layout/header.pug
+    div(class='profile-content')
+      include ./layout/userInfo.pug
+      div(class='frofile-function')
+        h1 Welcome to Profile page
+        a(href='/logout' class="login-popup") Logout
+  include ./layout/footer.pug

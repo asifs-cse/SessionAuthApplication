@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html
+  head
+    title Batch 5
+  body
+    include ./layout/header.pug
+    div(class='wrapper-register') 
+      div(class='form-box register')
+        h2 Register
+        form(action='/register' method='post')
+          div(class="input-box")
+            span(class='icon') <ion-icon name="person-outline"></ion-icon>
+            input(type='text' id='userName', name='userName')
+            label(for='username') Full Name: 
+          div(class="input-box") 
+            span(class='icon') <ion-icon name="call-outline"></ion-icon>
+            input(type='phone' id='phone' name='phone')
+            label(for='Phone') Phone: 
+          div(class="input-box") 
+            span(class='icon') <ion-icon name="mail-outline"></ion-icon>
+            input(type='text' id='email' name='email')
+            label(for='Email') Email: 
+          div(class="input-box") 
+            span(class='icon') <ion-icon name="lock-closed-outline"></ion-icon>
+            input(type='password' id='password' name='password')
+            label(for='Password') Password: 
+          div(class="register-btn") 
+            input(type='submit' id='submit', value='Register' class='btn')
+          div(class='register-login')
+            p Already Register?
+            a(href='/login' class='login-link') Login 
+    script(src='script.js')
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  include ./layout/footer.pug
