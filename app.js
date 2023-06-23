@@ -21,6 +21,7 @@ const store = new mongoSession({
     collection: "UserSessions"
 });
 
+//create session
 app.use(session({
     secret: 'key that willsign cookie',
     resave: false,
@@ -33,9 +34,11 @@ const isAuth= (req, res, next)=>{
     if(req.session.isAuth){
         next();
     }else{
-        res.redirect('/login');
+        res.render('login');
     }
 }
+
+//careate get home route
 app.get('/',(req, res)=>{
     res.render("home");
 });
@@ -45,8 +48,9 @@ app.get('/home',(req, res)=>{
 });
 
 //
-app.get('/login',(req, res)=>{
-    res.render('login');
+app.get('/login',isAuth, (req, res)=>{
+    alert("User already registerd");
+    res.redirect('/profile');
 });
 
 app.post('/login',async (req, res)=>{

@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
+//create Schema
 const userSchema = mongoose.Schema({
   userName:{
     type: String,
     require: true,
-  },
-  phone: {
+  },phone: {
     type: String,
     require: true,
     unique: true,
